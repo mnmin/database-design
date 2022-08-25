@@ -17,35 +17,59 @@ A local cinema wants to allow people to book tickets online to see movies that a
 - A movie scheen must have multiple movie lists whith their titles and time of showing for each day
   - Screens & Movies
 - The cinema should be able to add movie screens
+  - Admin user & Screens
 
 DB
 -User
     -ID
+    -Username
+    -Password
     -createdAt
     -updatedAt
-    -email
     -role VC (Admin)
+
 -Profile/Contact
     -ID
+    -User_ID
+    -purchase history (tickets)
+    -Email
+    -Phone number
     -createdAt
     -updatedAt
-    -purchase history (tickets)
+
 -Movies
     -Name (ID)
     -Length
     -createdAt
+    -Description
+    -Duration
+    -Rating (PG)
+    -Movie Image
 -Screens
-    -movie showings & time
-    -capacity
+    -Movie showings & time
+    -Capacity
     -Seats available/booked
     -createdAt
+    -Screen ID
+-Screening
+    -Id
+    -Start_Time
+    -Movie_Id
+    -Screen_Id
+    -Created_At
+    -Updated_At
 -Cinema
-    -ID (Name)
+    -ID
     -Address
-    -No of screens
+    -No of screen
 -Tickets
     -ID
-    -Movie
-    -Seat
+    -Screening_Id
+    -User_Id
+    -Type (adult/child)
     -createdAt
     -updatedAt
+-Image
+    -Cinema Image
+    -Movie Images
+    -Profile Images
